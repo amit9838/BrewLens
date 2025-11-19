@@ -1,73 +1,61 @@
-# React + TypeScript + Vite
+# **Brew**Lens
+> A modern, web-based explorer for Homebrew Casks and Formulae.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## What is BrewLens?
 
-Currently, two official plugins are available:
+BrewLens is a modern browser-based tool that fetches and parses **Homebrew Cask and Formula** metadata directly from official Homebrew sources. It helps developers and power users inspect application and command-line tool details with clarity and speed — all without using a single terminal command.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+You can browse both **Casks (macOS Apps)** and **Formulae (CLI Tools)**, including:
 
-## React Compiler
+  * Version details (stable, etc.)
+  * Installation commands
+  * Homepages and download URLs
+  * SHA256 checksums
+  * Dependencies and build dependencies
+  * Artifacts (for casks)
+  * Full JSON representation
+  * Deprecation and disable status
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+-----
 
-## Expanding the ESLint configuration
+## ⭐ Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 📦 **Cask & Formula Switcher**
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Instantly toggle between browsing the entire **Cask** (macOS apps) or **Formula** (CLI tools) database.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 🔍 **Powerful Search**
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Instantly search across thousands of Homebrew packages with pagination and fast filtering. Filter by name, token, description keywords, and more.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 🌗 **Dynamic Light/Dark Theme**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+The entire UI (body, cards, header, modals) updates instantly when switching themes and remembers your preference.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+
+## 🧰 Use Cases
+
+### **Developers**
+
+Inspect metadata, versions, URLs, and dependencies while building or debugging casks **and formulae**.
+
+### **Security / Compliance Teams**
+
+Verify download URLs, SHA256 checksums, and source authenticity for any package.
+
+### **SysAdmins**
+
+Audit applications **and tools** before deploying to managed macOS or Linux environments.
+
+### **Homebrew Contributors**
+
+Quickly investigate **cask or formula** structure before making pull requests.
+
+### **General Users**
+
+Discover new macOS apps **and command-line tools** available via Homebrew — without using Terminal.
+
+## 🤝 Contributing
+
+Contributions, feature suggestions, and pull requests are always welcome.
+Open an issue to request fixes, enhancements, or new features.

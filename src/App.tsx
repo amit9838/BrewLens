@@ -10,7 +10,7 @@ import { Button } from './components/ui/Button';
 import { Modal } from './components/ui/Modal';
 import { Footer } from './components/layout/Footer';
 import { NavDrawer } from './components/layout/Drawer';
-import { type BrewType, type BrewItem } from './types';
+import { type BrewType } from './types';
 import { cn } from './lib/utils';
 
 
