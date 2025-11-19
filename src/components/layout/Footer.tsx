@@ -4,7 +4,7 @@ import { Github } from 'lucide-react';
 
 export const Footer = () => {
     const currentYear = new Date().getFullYear();
-    const githubLink = "https://amit9838.github.io/BrewLens/";
+    const githubLink = "https://amit9838.github.io/brewlens/";
 
     return (
         // Styled to be at the bottom, providing padding and a separator border
