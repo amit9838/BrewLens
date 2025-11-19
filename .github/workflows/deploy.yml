@@ -6,6 +6,9 @@ on:
     branches:
       - main # Set this to your main branch name (e.g., 'main' or 'master')
 
+permissions: # <--- ADD THIS BLOCK
+  contents: write # This grants permission to push to the gh-pages branch
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
